@@ -65,14 +65,14 @@ void findRowSum(const double *data, double *sum1, int N, int M)
 	}
 }
 
-void findColSum(const double *data, double *sum1, int N, int M)
+void findColSum(const double *data, double *sum2, int N, int M)
 {
 	for (int i = 0; i < M; i++)
 	{
-		*(sum1 + i) = 0;
+		*(sum2 + i) = 0;
 		for (int j = 0; j < N; j++)
 		{
-			*(sum1 + i) += *(data + i + j * M);
+			*(sum2 + i) += *(data + i + j * M);
 		}
 	}
 }
